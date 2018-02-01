@@ -21,6 +21,8 @@
 	<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}"/>
 	<!-- dubbo provider timeout -->
 	<dubbo:provider timeout="${dubbo.provider.timeout}"/>
+	<!-- dubbo monitor address -->
+	<dubbo:monitor address="${dubbo.monitor.address}"/>
 	<!-- dubbo service version -->
 	<dubbo:service interface="org.fuys.ownrapi.service.MessageService" ref="messageServiceImpl"
 		version="${dubbo.interface.version}"/>
