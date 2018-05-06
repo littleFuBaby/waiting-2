@@ -45,7 +45,7 @@
 	</properties>
 	<!-- Configure build -->
 	<build>
-		<finalName>ownbp</finalName>
+		<finalName>owndubbo</finalName>
 		<!-- Configure plugins -->
 		<plugins>
 			<plugin>

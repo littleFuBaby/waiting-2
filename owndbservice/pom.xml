@@ -24,7 +24,7 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- rapi -->
+		<!-- dbapi -->
 		<dependency>
 			<groupId>org.fuys</groupId>
 			<artifactId>owndbapi</artifactId>
@@ -156,7 +156,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>owndbservice</finalName>
+		<finalName>owndubboservice</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -174,7 +174,27 @@
 				<!-- <version>${maven.jar.plugin.version}</version> -->
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
+					<excludes>
+						<exclude>META-INF/</exclude>
+						<exclude>config</exclude>
+						<exclude>logback.xml</exclude>
+					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptor>src/main/assembly/assembly.xml</descriptor><!--描述文件路径 -->
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase><!-- 绑定到package生命周期阶段上 -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
