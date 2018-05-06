@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.fuys</groupId>
+	<artifactId>owndbparent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- This file,which is set as pom.xml of parent project,should change that 
+		packaging is pom -->
+	<packaging>pom</packaging>
+	<name>owndbparent</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Define jdk version -->
+		<jdk.version>1.8</jdk.version>
+		<!-- Define maven compiler plugin version -->
+		<maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+		<!-- Define maven source plugin version -->
+		<maven.source.plugin.version>3.0.1</maven.source.plugin.version>
+		<!-- junit -->
+		<junit.version>4.12</junit.version>
+		<!-- rapi -->
+		<owndbapi.version>0.0.1-SNAPSHOT</owndbapi.version>
+		<!-- dubbo -->
+		<dubbo.version>2.5.5</dubbo.version>
+		<!-- netty -->
+		<netty.all.version>4.1.20.Final</netty.all.version>
+		<!-- javassist -->
+		<javassist.version>3.22.0-GA</javassist.version>
+		<!-- zookeeper -->
+		<zookeeper.version>3.4.11</zookeeper.version>
+		<zkclient.version>0.10</zkclient.version>
+		<!-- log -->
+		<logback.version>1.2.3</logback.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<!-- common tools -->
+		<commons.lang3.version>3.7</commons.lang3.version>
+		<commons.beanutils.version>1.9.3</commons.beanutils.version>
+		<!-- spring relative jar -->
+		<spring.version>5.0.3.RELEASE</spring.version>
+		<!-- web support -->
+		<servlet.version>4.0.0</servlet.version>
+		<jsp.version>2.3.2-b02</jsp.version>
+		<jstl.version>1.2</jstl.version>
+	</properties>
+	<!-- Configure build -->
+	<build>
+		<finalName>ownbp</finalName>
+		<!-- Configure plugins -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven.source.plugin.version}</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
