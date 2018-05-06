@@ -10,4 +10,7 @@
 	<packaging>jar</packaging>
 	<name>owndbapi</name>
 	<url>http://maven.apache.org</url>
+	<build>
+		<finalName>owndubboapi</finalName>
+	</build>
 </project>

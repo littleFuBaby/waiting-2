@@ -22,7 +22,7 @@
 	<!-- dubbo provider timeout -->
 	<dubbo:provider timeout="${dubbo.provider.timeout}"/>
 	<!-- dubbo monitor address -->
-	<dubbo:monitor address="${dubbo.monitor.address}"/>
+	<!-- <dubbo:monitor address="${dubbo.monitor.address}"/> -->
 	<!-- dubbo service version -->
 	<dubbo:service interface="org.fuys.owndbapi.service.SampleService" ref="sampleService"
 		version="${dubbo.interface.version}"/>

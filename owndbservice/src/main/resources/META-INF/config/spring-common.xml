@@ -25,6 +25,6 @@
 	<context:component-scan base-package="org.fuys.owndbservice"/>
 	
 	<!-- properties file -->
-	<context:property-placeholder location="classpath:*.properties"/>
+	<context:property-placeholder location="classpath:config/*.properties"/>
 
 </beans>
