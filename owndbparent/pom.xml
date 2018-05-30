@@ -10,6 +10,7 @@
 	<name>owndbparent</name>
 	<url>http://maven.apache.org</url>
 	<properties>
+		<maven.jar.plugin.version>3.1.0</maven.jar.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- Define jdk version -->
 		<jdk.version>1.8</jdk.version>

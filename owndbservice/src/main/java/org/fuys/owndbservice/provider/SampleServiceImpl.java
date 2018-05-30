@@ -8,7 +8,7 @@ public class SampleServiceImpl implements SampleService{
 
 	@Override
 	public String sayHello(String name) {
-		return "Hello " + name;
+		return "cluster--Hello " + name;
 	}
 
 }
